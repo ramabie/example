@@ -27,12 +27,8 @@ class AppServiceProvider extends ServiceProvider
     {
         if(App::environment('production'))
         {
-            URL::forceScheme('https');
+            resolve(\Illuminate\Routing\UrlGenerator::class)->forceScheme('https');
         }
 
-        if(App::environment('local'))
-        {
-            URL::forceScheme('https');
-        }
     }
 }
