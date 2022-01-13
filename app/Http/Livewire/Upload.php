@@ -16,7 +16,7 @@ class Upload extends Component
     public function updatedPhoto()
     {
         $this->validate([
-            'photo' => 'image|max:1024',
+            'photo' => 'image|max:5120',
         ]);
     }
 
