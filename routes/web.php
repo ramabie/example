@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ManualUploadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/manual-upload', [ManualUploadController::class, 'index'])->name('manual-upload.index');
+Route::post('/manual-upload/store', [ManualUploadController::class, 'store'])->name('manual-upload.store');
