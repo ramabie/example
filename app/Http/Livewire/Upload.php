@@ -11,7 +11,7 @@ class Upload extends Component
 
     public $photo;
 
-    public $message;
+    public $pesan='';
 
     public function updatedPhoto()
     {
@@ -22,7 +22,7 @@ class Upload extends Component
 
     public function save()
     {
-        $this->message = 'sukses';
+        $this->pesan = 'sukses';
     }
 
     public function render()

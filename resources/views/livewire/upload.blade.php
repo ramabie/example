@@ -14,6 +14,6 @@
         <button type="submit">Save Photo</button>
     </form>
 
-    {{ $message }}
+    {{ $pesan }}
 
 </div>
