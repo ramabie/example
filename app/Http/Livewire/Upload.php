@@ -11,18 +11,18 @@ class Upload extends Component
 
     public $photo;
 
-    public $pesan='';
-
-    public function updatedPhoto()
-    {
-        $this->validate([
-            'photo' => 'image|max:5120',
-        ]);
-    }
+    public $pesan='', $path='';
 
     public function save()
     {
+
+        $this->validate([
+            'photo' => 'image|max:5120',
+        ]);
+
         $this->pesan = 'sukses';
+
+        $this->path = $this->photo->store('photos');
     }
 
     public function render()
