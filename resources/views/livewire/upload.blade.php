@@ -1,5 +1,5 @@
 <div>
-    <h1>ini halaman upload livewire</h1>
+    <h1>ini halaman upload</h1>
 
     <form wire:submit.prevent="save">
 
