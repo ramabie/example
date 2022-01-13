@@ -17,7 +17,7 @@ class Upload extends Component
     {
 
         $this->validate([
-            'photo' => 'image|max:5120',
+            'photo' => 'image|max:5120', // 5 MB
         ]);
 
         $this->pesan = 'sukses';
