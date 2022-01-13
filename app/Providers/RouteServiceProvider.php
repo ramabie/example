@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
+use Illuminate\Routing\UrlGenerator;
+
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -37,12 +39,11 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        // if(App::environment('production'))
-        // {
-        //     resolve(\Illuminate\Routing\UrlGenerator::class)->forceScheme('https');
-        // }
+        if (App::environment('production')) {
+            resolve(UrlGenerator::class)->forceScheme('https');
+        }
 
-        // parent::boot();
+        parent::boot();
 
         $this->configureRateLimiting();
 
