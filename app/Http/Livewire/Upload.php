@@ -11,7 +11,7 @@ class Upload extends Component
 
     public $photo;
 
-    public $pesan='', $path='';
+    public $pesan='', $path='', $isian='';
 
     public function save()
     {
