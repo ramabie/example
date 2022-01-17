@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('upload-livewire');
 });
 
 Route::get('/manual-upload', [ManualUploadController::class, 'index'])->name('manual-upload.index');
