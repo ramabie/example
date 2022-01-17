@@ -3,8 +3,6 @@
 
     <form wire:submit.prevent="save">
 
-        @csrf
-
         Ketik Disini : <input type="text" wire:model="isian">
         <br>
 
