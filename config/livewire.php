@@ -68,7 +68,7 @@ return [
     |
     */
 
-    'app_url' => 'https://sejutapengenal.tubankab.go.id',
+    'app_url' => null,
 
     /*
     |--------------------------------------------------------------------------
